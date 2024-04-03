@@ -48,7 +48,6 @@ module.exports = {
 
   deleteUserById: function (req, res) {
     const {id} = req.params;
-    console.log('Action Id -->> ', id);
     UserModel.delete(id).then((deleteRes) => {
       (!deleteRes)
         ? res.json({
